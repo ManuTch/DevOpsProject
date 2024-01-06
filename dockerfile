@@ -5,7 +5,7 @@ RUN yum install -y git
 RUN git clone https://github.com/ManuTch/DevOpsProject.git /var/www/html/
 WORKDIR /var/www/html
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80
+EXPOSE 80 22
 
 
 
