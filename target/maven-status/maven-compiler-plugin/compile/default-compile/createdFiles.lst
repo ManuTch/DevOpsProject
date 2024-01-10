@@ -5,7 +5,6 @@ my\app\taxeapp\service\TaxeService.class
 my\app\taxeapp\service\TerrainService.class
 my\app\taxeapp\repository\CategorieRepository.class
 my\app\taxeapp\service\TauxService.class
-my\app\taxeapp\taxeapptest\MyServiceTest.class
 my\app\taxeapp\controller\TerrainController.class
 my\app\taxeapp\repository\TaxeRepository.class
 my\app\taxeapp\bean\Taxe.class

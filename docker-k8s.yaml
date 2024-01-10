@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-k8s-taxe-deployment
+  labels:
+    app: docker-k8s-taxe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-k8s-taxe
+  template:
+    metadata:
+      labels:
+        app: docker-k8s-taxe
+    spec:
+      containers:
+        - name: docker-k8s-taxe
+          image: houdafrn/docker-taxe
+          ports:
+            - containerPort: 8080
+
