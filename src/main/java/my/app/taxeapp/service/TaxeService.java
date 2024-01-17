@@ -28,22 +28,22 @@ public class TaxeService {
     }
 
     public Taxe createTaxe(Taxe taxe) {
-        // You can add additional business logic or validation here if needed
+
         return taxeRepository.save(taxe);
     }
 
     public Taxe updateTaxe(Long id, Taxe updatedTaxe) {
         Optional<Taxe> optionalTaxe = taxeRepository.findById(id);
         if (optionalTaxe.isPresent()) {
-            // Update the existing taxe with the new data
+
             Taxe existingTaxe = optionalTaxe.get();
             existingTaxe.setTaux(updatedTaxe.getTaux());
             existingTaxe.setTerrain(updatedTaxe.getTerrain());
-            // Update other fields as needed
+
 
             return taxeRepository.save(existingTaxe);
         }
-        return null; // or throw an exception indicating that the taxe with the given id was not found
+        return null;
     }
 
     public void deleteTaxe(Long id) {

@@ -38,20 +38,20 @@ public class TauxService {
     }
 
     public Taux createTaux(Taux taux) {
-        // You can add additional business logic or validation here if needed
+
         return tauxRepository.save(taux);
     }
 
     public Taux updateTaux(Long id, Taux updatedTaux) {
         Optional<Taux> optionalTaux = tauxRepository.findById(id);
         if (optionalTaux.isPresent()) {
-            // Update the existing taux with the new data
+
             Taux existingTaux = optionalTaux.get();
-            // Update other fields as needed
+
 
             return tauxRepository.save(existingTaux);
         }
-        return null; // or throw an exception indicating that the taux with the given id was not found
+        return null;
     }
 
     public void deleteTaux(Long id) {

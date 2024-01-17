@@ -48,7 +48,7 @@ public class TerrainService {
 
             return terrainRepository.save(existingTerrain);
         } else {
-            return null; // Handle not found case
+            return null;
         }
     }
 
