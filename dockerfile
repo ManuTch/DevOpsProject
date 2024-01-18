@@ -2,20 +2,20 @@
 FROM maven:3.8.3-openjdk-17 AS build
 
 
-     # Définissez le répertoire de travail pour cette étape
+    
 WORKDIR /usr/app
 
-     # Copiez le fichier pom.xml pour installer les dépendances
+    
 COPY pom.xml .
 
 
-COPY src src/
+COPY src/ src/
 
 
 RUN mvn clean package
 
 
-FROM openjdk:21
+FROM openjdk:17
 
 
 WORKDIR /usr/app
