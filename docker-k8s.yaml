@@ -16,6 +16,14 @@ spec:
     spec:
       containers:
         - name: docker-k8s-taxe
-          image: houdafrn/docker-taxe
+          image: houdafrn/docker-taxe:latest
           ports:
             - containerPort: 8080
+        - name: trivy-scanner
+          image: aquasec/trivy:latest
+          volumeMounts:
+            - name: scan-results
+              mountPath: /scan-results
+      volumes:
+        - name: scan-results
+          emptyDir: {}
